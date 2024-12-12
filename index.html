@@ -5,33 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: palevioletred;
+            padding: 10px 20px;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 10px;
-            padding: 0;
+            justify-content: flex-start;
+            gap: 20px;
         }
+
+        nav ul li {
+            margin: 0;
+        }
+
         nav ul li a {
             text-decoration: none;
-            color: palevioletred;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
         nav ul li a:hover {
-            color: darkblue;
+            background-color: #e86b97;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffe4e1;
+            color: palevioletred;
+            border-bottom: 2px solid palevioletred;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Main Section */
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        main p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: palevioletred;
+            color: white;
+            font-size: 14px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Misha's Website</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
     <main>
-        <p>Homepage</p>
+        <p>Welcome to Misha's Website! This is the homepage. Click the "Blog" link in the navigation bar to check out my latest posts.</p>
     </main>
+    <footer>
+        &copy; 2024 Misha's Website. All rights reserved.
+    </footer>
 </body>
 </html>

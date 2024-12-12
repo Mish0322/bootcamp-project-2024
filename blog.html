@@ -5,43 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: palevioletred;
+            padding: 10px 20px;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 10px;
-            padding: 0;
+            justify-content: flex-start;
+            gap: 20px;
         }
+
+        nav ul li {
+            margin: 0;
+        }
+
         nav ul li a {
             text-decoration: none;
-            color: palevioletred;
+            color: white;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
         nav ul li a:hover {
-            color: palevioletred;
+            background-color: #e86b97;
         }
-        .blog-container {
-            margin: 20px;
+
+        /* Header */
+        header {
+            text-align: center;
             padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #f9f9f9;
+            background-color: #ffe4e1;
+            color: palevioletred;
+            border-bottom: 2px solid palevioletred;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .blog-container h2 {
+            color: palevioletred;
+            margin-bottom: 15px;
+        }
+
+        .blog-container p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        /* Image Grid */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .image-item {
+            text-align: center;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: palevioletred;
+            color: white;
+            font-size: 14px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Blog Page</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
     <main>
-        <!-- Required <div> -->
         <div class="blog-container">
-            <h2>Future Blog</h2>
-            <p>Blog Content Placeholder</p>
+            <h2>Diving into "The Only Woman in the Room" by Marie Benedict</h2>
+            <p>This book outlines the real story of Hedy Lamarr's journey from an actress to an inventor. Benedict illustrates her life in Austria, her escape from her controlling husband who was involved with Hitler, and her contributions to World War II. The struggles of women is pictured throughout her life by showing how she was only valued for her beauty although her brains were strong too. Without Lamarr's invention, we may not have today's technology of Wi-Fi and Bluetooth. Unfortunately, not many people know she was the brains behind this as she was a woman and the world did not want to recognize her achievement. This book is truly captivating and makes you understand the challenges of women and the harsh times of World War II.</p>
+        </div>
+
+        <div class="blog-container">
+            <h2>Highlights from my Study Abroad in Rome, Italy</h2>
+            <div class="image-grid">
+                <figure class="image-item">
+                    <img src="images/mirror_church.jpeg" alt="Mirror Church">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/museum_ceiling.jpeg" alt="Museum Ceiling">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/piazzanovana.jpeg" alt="Piazza Navona">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/rome_street.jpeg" alt="Rome Street">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/rooftop.jpeg" alt="Rooftop View">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/st_peters.jpeg" alt="St. Peter's Basilica">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/vatican_art.jpeg" alt="Vatican Artwork">
+                    
+                </figure>
+                <figure class="image-item">
+                    <img src="images/vatican.jpeg" alt="The Vatican">
+                    
+                </figure>
+            </div>
         </div>
     </main>
+    <footer>
+        &copy; 2024 My Blog. All rights reserved.
+    </footer>
 </body>
 </html>
